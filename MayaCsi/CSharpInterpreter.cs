@@ -27,7 +27,7 @@ namespace MayaCsi
         private void Compile(string filepath, string sourceCode)
         {
             var options = ScriptOptions.Default
-                .WithReferences(Assembly.GetEntryAssembly())
+                .WithReferences(Assembly.GetExecutingAssembly())
                 .WithReferences(typeof(object).Assembly)
                 .WithReferences(Path.Combine(MayaRootPath, "bin", "openmayacs.dll"))
                 .WithFilePath(filepath);
